@@ -39,3 +39,39 @@ public class Primos {
     }
 
 }
+
+// CORREÇÃO PETRI
+import java.util.Scanner;
+
+public class Primos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n, i = 2;
+        boolean primo = true;
+
+        System.out.println("Informe um valor inteiro e positivo");
+        n = scanner.nextInt();
+
+        //Verificando se o valor lido é inteiro positivo
+        while (n < 0) {
+            System.out.println("O valor informado não é positivo");
+            System.out.println("Informe um valor inteiro e positivo");
+            n = scanner.nextInt();
+        }
+
+        while (i <= n-1){
+            if (n%i == 0){
+                primo = false;
+            }
+            i++;
+        }
+
+        if (primo == true) {
+            System.out.println("O valor de " + n + " é primo.");
+        } else {
+            System.out.println("O valor " + n + " não é primo.");
+        }
+    }
+}
+
+
