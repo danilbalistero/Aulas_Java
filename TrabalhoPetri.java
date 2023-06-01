@@ -40,10 +40,12 @@ public class Trabalho {
                     System.out.println("vetor[" + i + "] = " + vetor[i]);
                 }
 
+            } else if (operacao == 3){
+                 
             }
-        }   while (operacao != 5) ;
 
-
+        }   while (operacao != 5);
+            System.out.println("operação finalizada");
     }
 
 }
