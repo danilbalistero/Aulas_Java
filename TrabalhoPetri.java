@@ -1,4 +1,4 @@
-package pacote;
+package com.company;
 
 import java.util.Scanner;
 
@@ -16,14 +16,18 @@ public class Trabalho {
         String[] vetor = new String[tamanho];
 
         do {
-            System.out.println("1 - Inserir todos elementos do vetor.");
-            System.out.println("2 - Mostrar todos elementos do vetor.");
-            System.out.println("3 - Buscar um elemento do vetor pelo seu índice.");
-            System.out.println("4 - Remover um elemento do vetor pelo seu índice.");
-            System.out.println("5 - Finalizar o programa.");
+            System.out.println("             ʕ•́ᴥ•̀ʔ Menu de Vetores ʕ•́ᴥ•̀ʔ");
+            System.out.println(" __________________________________________________ ");
+            System.out.println("| 1 - Inserir todos elementos do vetor.            |");
+            System.out.println("| 2 - Mostrar todos elementos do vetor.            |");
+            System.out.println("| 3 - Buscar um elemento do vetor pelo seu índice. |");
+            System.out.println("| 4 - Remover um elemento do vetor pelo seu índice.|");
+            System.out.println("| 5 - Finalizar o programa.                        |");
+            System.out.println(" __________________________________________________ ");
 
             //to do (Garantir q o usuario informe apenas operaçoes validas)
-            System.out.println("Informe a operação desejada");
+            System.out.println("");
+            System.out.println("Informe a operação desejada!");
             operacao = scanner.nextInt();
 
             if (operacao == 1) {
@@ -31,7 +35,6 @@ public class Trabalho {
                 for (int i = 0; i < tamanho; i++) {
                     System.out.println("Insira um valor no vetor na posição " + i + ".");
                     vetor[i] = scanner.next(); //de int é nextint, e string nexline
-
                 }
 
             } else if (operacao == 2) {
@@ -41,11 +44,15 @@ public class Trabalho {
                 }
 
             } else if (operacao == 3){
-                 
+                //operação 3
+
+            } else if (operacao == 4){
+                //operação 4
+
             }
 
         }   while (operacao != 5);
-            System.out.println("operação finalizada");
+        System.out.println("operação finalizada");
     }
 
 }
