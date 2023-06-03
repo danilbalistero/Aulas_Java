@@ -16,18 +16,19 @@ public class Trabalho {
         String[] vetor = new String[tamanho];
 
         do {
-            System.out.println("             ʕ•́ᴥ•̀ʔ Menu de Vetores ʕ•́ᴥ•̀ʔ");
-            System.out.println(" __________________________________________________ ");
-            System.out.println("| 1 - Inserir todos elementos do vetor.            |");
-            System.out.println("| 2 - Mostrar todos elementos do vetor.            |");
-            System.out.println("| 3 - Buscar um elemento do vetor pelo seu índice. |");
-            System.out.println("| 4 - Remover um elemento do vetor pelo seu índice.|");
-            System.out.println("| 5 - Finalizar o programa.                        |");
-            System.out.println(" __________________________________________________ ");
+            System.out.println("           ╔═════════════════════════════╗                                      ");
+            System.out.println("           ║ ʕ•́ᴥ•̀ʔ Menu de Vetores ʕ•́ᴥ•̀ʔ ║  ");
+            System.out.println("╔══════════╩═════════════════════════════╩══════════╗");
+            System.out.println("║ 1 - Inserir todos elementos do vetor.             ║");
+            System.out.println("║ 2 - Mostrar todos elementos do vetor.             ║");
+            System.out.println("║ 3 - Buscar um elemento do vetor pelo seu índice.  ║");
+            System.out.println("║ 4 - Remover um elemento do vetor pelo seu índice. ║");
+            System.out.println("║ 5 - Finalizar o programa.                         ║");
+            System.out.println("╚═══════════════════════════════════════════════════╝");
 
             //to do (Garantir q o usuario informe apenas operaçoes validas)
             System.out.println("");
-            System.out.println("Informe a operação desejada!");
+            System.out.println("           Informe a operação desejada!    ");
             operacao = scanner.nextInt();
 
             if (operacao == 1) {
