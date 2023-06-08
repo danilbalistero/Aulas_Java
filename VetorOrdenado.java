@@ -1,11 +1,13 @@
+package com.company;
 import java.util.Scanner;
 
-public class Ordenacao {
+public class Trabalho {
     public static void main(String[] args) {
-        int tamanho, aux;
         Scanner scanner = new Scanner(System.in);
+        int tamanho, operacao;
 
-        System.out.println("Informe um valor inteiro e positivo");
+        //Garantir q o tamanho seja positivo e inteiro
+        System.out.println("Informe o tamanho do Vetor");
         tamanho = scanner.nextInt();
 
         while (tamanho < 0) {
@@ -14,35 +16,67 @@ public class Ordenacao {
             tamanho = scanner.nextInt();
         }
 
-        //parte do trabalho
-        int [] vetor = new int[tamanho];
+       //int [] vetor;
 
-        /*laço para preencher os vetores
-        enquanto i for menor q o tamanho declarado ele vai ficar repetindo*/
-        for (int i = 0; i < tamanho ; i++) {
-            System.out.println("Informe um valor para ser inserido na posição" + i + " do meu vetor:");
-            int valor = scanner.nextInt();
-            vetor[i] = valor;
+        String[] vetor = new String[tamanho];
 
-        }
+        System.out.println("⟶⟳⇄ Desenvolvendo Aplicações com Vetores em Java ⟶⟳⇄");
 
-        //Ordenação
-        for (int i = 0; i < tamanho - 1; i++){
-            for (int j = 0; j < tamanho - 1; j++) {
-                if (vetor[j] > vetor[j+1]) {
-                aux = vetor[j];
-                vetor[j] = vetor[j + 1];
-                vetor[j + 1] = aux;
-                 }
+        do {
+            System.out.println("           ╔═════════════════════════════╗                                      ");
+            System.out.println("           ║ ʕ•́ᴥ•̀ʔ Menu de Vetores ʕ•́ᴥ•̀ʔ ║  ");
+            System.out.println("╔══════════╩═════════════════════════════╩══════════╗");
+            System.out.println("║ 1 - Inserir todos elementos do vetor.             ║");
+            System.out.println("║ 2 - Mostrar todos elementos do vetor.             ║");
+            System.out.println("║ 3 - Buscar um elemento do vetor pelo seu índice.  ║");
+            System.out.println("║ 4 - Remover um elemento do vetor pelo seu índice. ║");
+            System.out.println("║ 5 - Finalizar o programa.                         ║");
+            System.out.println("╚═══════════════════════════════════════════════════╝");
+
+            //to do (Garantir q o usuario informe apenas operaçoes validas)
+            System.out.println(" ");
+            System.out.println("           Informe a operação desejada!    ");
+            operacao = scanner.nextInt();
+
+            if (operacao == 1) {
+                //operacao é 1, ta pronto
+                for (int i = 0; i < tamanho; i++) {
+                    System.out.println("Insira um valor no vetor na posição " + i + ".");
+                    vetor[i] = scanner.next(); //de int é nextint, e string nexline
+                }
+
+            } else if (operacao == 2) {
+                // operacao é 2, ta pronto
+                for (int i = 0; i < tamanho; i++) {
+                    System.out.println("vetor[" + i + "] = " + vetor[i]);
+                }
+
+            } else if (operacao == 3){
+                //operação 3, ta pronto
+                System.out.println("Informe o indice que deseja buscar");
+                // criei um scanner para buscar o indice
+                int buscar = scanner.nextInt();
+                //vai ver se o numero informado esta no vetor
+                if (buscar >= tamanho-1 && buscar < tamanho){
+                    //peguei o valor do vetor e atribui a variavel elemento
+                    String elemento = vetor[buscar];
+                    System.out.println("O indice informado é o " + elemento);
+                } else {
+                    System.out.println("O indice informado é invalido, digite apenas entre 0 e " + tamanho);
+                }
+
+            } else if (operacao == 4) {
+              //operação 4
+                System.out.println("Informe o indice que deseja remover");
+                int del = scanner.nextInt();
+
+
             }
-        }
 
-
-        //Exibindo o vetor
-        for (int i = 0; i < tamanho; i++){
-            System.out.println("vetor[" + i + "] = " + vetor[i]);
-
-        }
-
+        }   while (operacao != 5);
+        System.out.println("operação finalizada");
     }
+
 }
+
+
