@@ -7,6 +7,7 @@ public class Trabalho {
         Scanner scanner = new Scanner(System.in);
         int tamanho, operacao;
 
+        
         System.out.println("⟶⟳⇄ Desenvolvendo Aplicações com Vetores em Java ⟶⟳⇄");
 
         System.out.println("Informe o tamanho do Vetor");
@@ -18,10 +19,7 @@ public class Trabalho {
             tamanho = scanner.nextInt();
         }
 
-        //int [] vetor;
-
         String[] vetor = new String[tamanho];
-
 
         do {
             System.out.println("           ╔═════════════════════════════╗                                      ");
@@ -39,7 +37,6 @@ public class Trabalho {
             System.out.println("           Informe a operação desejada!    ");
             operacao = scanner.nextInt();
 
-            //
             while (operacao < 1 || operacao > 5) {
                 System.out.println("Operação invalida. Digite um numero entre 1 e 5");
                 operacao = scanner.nextInt();
@@ -85,11 +82,23 @@ public class Trabalho {
                     tamanho--;
                     System.out.println("Índice removido com sucesso");
                     System.out.println("O índice removido foi [" + del + "]");
-
                     // Exibir os elementos atualizados do vetor
                     for (int i = 0; i < tamanho; i++) {
                         System.out.println("vetor[" + i + "] = " + vetor[i]);
                     }
+                    System.out.println("Deseja adicionar um novo elemento no vetor? (sim/não)");
+                    String resposta = scanner.next();
+                    //usei o equals para comparar a resposta
+                    if (resposta.equals("sim")) {
+                        System.out.println("Informe um novo elemento");
+                        String elemento = scanner.next();
+
+                        //adiciona um novo elemento
+                        vetor[tamanho] = elemento;
+                        tamanho++;
+                        System.out.println("Novo elemento adicionado com sucesso");
+                    }
+
                 } else {
                     System.out.println("Índice inválido. Digite um valor entre 0 e " + (tamanho - 1));
                 }
