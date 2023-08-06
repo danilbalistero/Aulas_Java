@@ -8,7 +8,7 @@ public class TabelaVerdade {
 
             //equals para comparar os valores
             if (conectivo.equals("conjunção")) {
-                return (proposicao1 == 1 && proposicao2 == 1) ? 1 : 0; //
+                return (proposicao1 == 1 && proposicao2 == 1) ? 1 : 0; 
             } else if (conectivo.equals("disjunção")) {
                 return (proposicao1 == 1 || proposicao2 == 1) ? 1 : 0;
             } else if (conectivo.equals("condicional")) {
